@@ -70,7 +70,7 @@ char* getFileName(char* fileName) {
 }
 
 int getFileData(FILE **fp, Candidate **candidatesPtr) {
-	char id[ID_MAX_LENGTH], answers[N_QUESTIONS];
+	char id[ID_MAX_LENGTH+1], answers[N_QUESTIONS+1];
 	int n = 0;
 	while((fscanf(*fp, "%s %s", id, answers)) != EOF) {
 		createNewCandidate(candidatesPtr, n);
